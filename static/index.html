@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #my_img {
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 88vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">Category Maker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex">
+                <input class="form-control me-2" id="sf" size="50" type="text" value="amber">
+                <button class="btn btn-outline-success" type="button" onclick="get_data('/see-file')">Load</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid mt-1">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-10">
+                    <input class="form-control" id="cust" size="50" type="text" value="amber">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success" type="button"
+                            onclick="move_file(document.getElementById('cust').value)">Move
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" type="button" onclick="move_file(this.innerText)">Chowkidhani
+                </button>
+                <button class="btn btn-success btn-lg" type="button" onclick="move_file(this.innerText)">hawa mahal
+                </button>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="my_img"></div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
